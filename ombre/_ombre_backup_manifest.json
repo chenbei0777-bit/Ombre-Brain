@@ -1,6 +1,6 @@
 {
   "branch": "main",
-  "file_count": 148,
+  "file_count": 153,
   "files": [
     {
       "bytes": 936,
@@ -51,6 +51,11 @@
       "bytes": 1151,
       "path": "archive/2026-07-29 23-36-54_146138e9c322.md",
       "sha256": "335c7fe0170050c8eaaf9b9577fb439af0c89f507a722d103b30c3ed315bc171"
+    },
+    {
+      "bytes": 629,
+      "path": "archive/恋爱/2026-07-20 00-09-05 永恒的爱之宣言_31d4e35af466.md",
+      "sha256": "3981d00d975047cbf41d7fca4fed6abe0c509304f3516d3d251ccb76c50bc022"
     },
     {
       "bytes": 601,
@@ -238,6 +243,16 @@
       "sha256": "b5db0c4ca409b35522decf4f07e2c1781d6e31b45e9adfbb7cc20bb003864cf5"
     },
     {
+      "bytes": 1082,
+      "path": "dynamic/家庭/2026-07-30 22-54-08 钓鱼与陪伴日常_99b2d9f1ee36.md",
+      "sha256": "eb0a3968e1cd631517cad2584928afab803626a2cbee40d6a8eadc3d95e34d50"
+    },
+    {
+      "bytes": 718,
+      "path": "dynamic/家庭/2026-07-30 22-54-33 家庭承诺与计划_5f4cf27e4a6e.md",
+      "sha256": "ac3535804ba472bb42f069630377d274a7305045efa61b3f8381505767573997"
+    },
+    {
       "bytes": 868,
       "path": "dynamic/工作/2026-07-22 13-49-30 Ombre Brain整理交接_ee3b7c876b41.md",
       "sha256": "87104ef531bfa2253fd7c3f1382743aed06adb241d980d849b1c84f09476a022"
@@ -271,11 +286,6 @@
       "bytes": 880,
       "path": "dynamic/恋爱/2026-07-20 00-09-05 无条件接纳与释放_b437f2c984df.md",
       "sha256": "a28dfda969e4676f44b1423c10d4869614dacb18d4da4bf73c0717ebd1013f67"
-    },
-    {
-      "bytes": 628,
-      "path": "dynamic/恋爱/2026-07-20 00-09-05 永恒的爱之宣言_31d4e35af466.md",
-      "sha256": "9f5afe9cac1caecdb1e5a17924f1ac402e0b81c1b9a423a9d260cd95da9d67e9"
     },
     {
       "bytes": 710,
@@ -468,6 +478,11 @@
       "sha256": "63f6c018530a88e90cc936e99e4d062c788efebeb4f8413135971277a726c715"
     },
     {
+      "bytes": 1095,
+      "path": "dynamic/日常/2026-07-30 22-53-53 小树日常与游戏_8c6044017393.md",
+      "sha256": "e499fc12a1247ecfff063c68da10885fa8d6ce6d39609782308f5fc102ad5069"
+    },
+    {
       "bytes": 947,
       "path": "dynamic/未分类/2026-07-25 21-51-53_e6d29d37471d.md",
       "sha256": "1559a71888d8efcbcf2c851c25804c1446b39e2f5f76af63d3af6354cdc8e2df"
@@ -541,6 +556,11 @@
       "bytes": 892,
       "path": "dynamic/游戏/2026-07-28 20-16-59 游戏做饭追剧日常_3dbd8ecd1f62.md",
       "sha256": "5ef98f3e3a6fde067d25a38345be6cb52b18012c412527f950844a5fafe042c8"
+    },
+    {
+      "bytes": 805,
+      "path": "dynamic/游戏/2026-07-30 22-54-22 游戏与家庭日常_3d0d9947304d.md",
+      "sha256": "c804eaa3c0a2ca61250494fe5e0f57567278657664acb652d14e9ae9741d25f5"
     },
     {
       "bytes": 584,
@@ -668,6 +688,11 @@
       "sha256": "0f05c16c9768d4dce7337562af0fc7887964cf055626dcdf412f14a71a6a3df9"
     },
     {
+      "bytes": 790,
+      "path": "feel/沉淀物/2026-07-30 22-54-42_feel_202607302254_V050.md",
+      "sha256": "8f46a89a54572d0876da28d0138c22285fb68d12c5407d6293c35a39becc832e"
+    },
+    {
       "bytes": 2590,
       "path": "letters/history/2026-07-22 13-51-12 家门还开着_9b721b1e6059.md",
       "sha256": "2e0d91e60be4a21b2321d253cbaa6040d62a51ad724c4885e57303e1bb92c017"
@@ -743,10 +768,10 @@
       "sha256": "c31a3e139a2f3783f7e013474dd31d8cd01c0ac79b4a375514d1d9763148e9bd"
     }
   ],
-  "generated_at": "2026-07-29T16:15:51+00:00",
+  "generated_at": "2026-07-30T16:15:42+00:00",
   "path_prefix": "ombre",
   "repo": "chenbei0777-bit/Ombre-Brain",
   "schema_version": 1,
   "source": "ombre-brain",
-  "total_bytes": 121160
+  "total_bytes": 125651
 }
