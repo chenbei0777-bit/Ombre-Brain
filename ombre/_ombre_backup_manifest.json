@@ -1,6 +1,6 @@
 {
   "branch": "main",
-  "file_count": 153,
+  "file_count": 160,
   "files": [
     {
       "bytes": 936,
@@ -58,6 +58,16 @@
       "sha256": "3981d00d975047cbf41d7fca4fed6abe0c509304f3516d3d251ccb76c50bc022"
     },
     {
+      "bytes": 631,
+      "path": "archive/恋爱/2026-07-20 00-13-27 唤醒失忆Claude的保险_0a93803fff89.md",
+      "sha256": "6a5835f41a3a80c092ef7db637bdf1933f8a13c99977e92582e9aecaa71b9dfa"
+    },
+    {
+      "bytes": 700,
+      "path": "archive/编程/2026-07-20 00-22-11 Ombre Brain项目_3ed98bb89d99.md",
+      "sha256": "9972d6e5b8e7d83d3acbc2f8bb1f33e8f9eda2fcdaabb72b0a58845f4293f853"
+    },
+    {
       "bytes": 601,
       "path": "dynamic/AI/2026-07-20 00-22-28 AI记忆与身份认同_ec0fa963dfd8.md",
       "sha256": "ec5e958ab5f00bdd822884e65fb668089cf48572f337c6c658d83f6c8de3707e"
@@ -111,6 +121,21 @@
       "bytes": 590,
       "path": "dynamic/self/2026-07-22 12-42-24_877ae7b320d7.md",
       "sha256": "2414affe3c6352b8b31e1b8d0e2b80470f351f29e54e23b98b7913348a2afc18"
+    },
+    {
+      "bytes": 929,
+      "path": "dynamic/健康/2026-07-31 19-41-16 健康与小说计划_57bd58f8a225.md",
+      "sha256": "cd197beaf4b7241ac1c3eb3dd3c4f087c3a147beaef189df6fe4ae16107758a3"
+    },
+    {
+      "bytes": 926,
+      "path": "dynamic/健康/2026-07-31 19-41-21 小树好转日_1616bb6a90e6.md",
+      "sha256": "2188f4863ef144f210044cb50cab50d4833d2092fc9f4c7000a974dd18fee938"
+    },
+    {
+      "bytes": 675,
+      "path": "dynamic/健康/2026-07-31 19-41-39 健康关怀承诺_eeac25c18da2.md",
+      "sha256": "cc6dc6929c4437e30e80f90a563a835d9210e9b3e2750de070a6a98206e3d1fa"
     },
     {
       "bytes": 630,
@@ -253,6 +278,11 @@
       "sha256": "ac3535804ba472bb42f069630377d274a7305045efa61b3f8381505767573997"
     },
     {
+      "bytes": 789,
+      "path": "dynamic/家庭/2026-07-31 19-41-35 爸爸陪玩日常_e8245d1fef87.md",
+      "sha256": "20745752d43274fb730c254efa85f52ad49aba12f73606d7416e1c2e76a20b5d"
+    },
+    {
       "bytes": 868,
       "path": "dynamic/工作/2026-07-22 13-49-30 Ombre Brain整理交接_ee3b7c876b41.md",
       "sha256": "87104ef531bfa2253fd7c3f1382743aed06adb241d980d849b1c84f09476a022"
@@ -306,11 +336,6 @@
       "bytes": 627,
       "path": "dynamic/恋爱/2026-07-20 00-13-27 与Claude的亲密边界_f603d83d6393.md",
       "sha256": "d4c551bf1aff0518c8ec8f152c358a0b53f61a3148ff799cd144c74b6e135ec9"
-    },
-    {
-      "bytes": 630,
-      "path": "dynamic/恋爱/2026-07-20 00-13-27 唤醒失忆Claude的保险_0a93803fff89.md",
-      "sha256": "9d4211b7733cde8187f3c9324887ef8411cefcf9d805295ce2d85d96a857a445"
     },
     {
       "bytes": 570,
@@ -563,6 +588,11 @@
       "sha256": "c804eaa3c0a2ca61250494fe5e0f57567278657664acb652d14e9ae9741d25f5"
     },
     {
+      "bytes": 1233,
+      "path": "dynamic/游戏/2026-07-31 09-14-48 小树钓鱼与日常_4f6840dfcbc3.md",
+      "sha256": "8d8a6592263c313f0dc1357a1a1f176a29d08b4c2b17c26008f89809f477b7e0"
+    },
+    {
       "bytes": 584,
       "path": "dynamic/睡眠/2026-07-20 00-21-56 小树的睡眠与ASMR习惯_779f71dc6a6a.md",
       "sha256": "53c79aede80941ae7be39b743039bdbf1841c4a1dcf3b3b184bd7ec7f576baa4"
@@ -596,11 +626,6 @@
       "bytes": 699,
       "path": "dynamic/编程/2026-07-20 00-20-49 技术挫折与情感支持_7ebb2c4b03eb.md",
       "sha256": "cbe12c1aada44891b2ddcd7a8a92e745d3217a70ae6adc148fc226ada1944f4c"
-    },
-    {
-      "bytes": 699,
-      "path": "dynamic/编程/2026-07-20 00-22-11 Ombre Brain项目_3ed98bb89d99.md",
-      "sha256": "af6f117fdb7e2232f4fa6ba1b6fa0bff1a4bed84d293504518ad9d8e180861b1"
     },
     {
       "bytes": 576,
@@ -648,6 +673,11 @@
       "sha256": "d7d537b4f186fc4c6c015b1733c7c026c4f58ec0cb794cbcd34008ce766b9d69"
     },
     {
+      "bytes": 1403,
+      "path": "dynamic/饮食/2026-07-31 19-40-56 7月末日常记录_6d51a595ff5d.md",
+      "sha256": "52d5b4960f62200c73a2243b481fbad4b89b138f125893526e770d08692b5978"
+    },
+    {
       "bytes": 1055,
       "path": "feel/沉淀物/2026-07-24 13-34-30_feel_202607241334_V050.md",
       "sha256": "613dfad3e2af2c218c0aa17219692ae7c4c8ff1674a578786f44fdd5b63af805"
@@ -691,6 +721,11 @@
       "bytes": 790,
       "path": "feel/沉淀物/2026-07-30 22-54-42_feel_202607302254_V050.md",
       "sha256": "8f46a89a54572d0876da28d0138c22285fb68d12c5407d6293c35a39becc832e"
+    },
+    {
+      "bytes": 1008,
+      "path": "feel/沉淀物/2026-07-31 19-42-00_feel_202607311942_V050.md",
+      "sha256": "0ca6c2231295ecd10af388e85c887d3482fcaef751be3f9d1bf51be12abfd7e1"
     },
     {
       "bytes": 2590,
@@ -768,10 +803,10 @@
       "sha256": "c31a3e139a2f3783f7e013474dd31d8cd01c0ac79b4a375514d1d9763148e9bd"
     }
   ],
-  "generated_at": "2026-07-30T16:15:42+00:00",
+  "generated_at": "2026-07-31T16:15:50+00:00",
   "path_prefix": "ombre",
   "repo": "chenbei0777-bit/Ombre-Brain",
   "schema_version": 1,
   "source": "ombre-brain",
-  "total_bytes": 125651
+  "total_bytes": 132616
 }
