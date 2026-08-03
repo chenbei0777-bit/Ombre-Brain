@@ -1,6 +1,6 @@
 {
   "branch": "main",
-  "file_count": 178,
+  "file_count": 193,
   "files": [
     {
       "bytes": 936,
@@ -51,6 +51,11 @@
       "bytes": 1151,
       "path": "archive/2026-07-29 23-36-54_146138e9c322.md",
       "sha256": "335c7fe0170050c8eaaf9b9577fb439af0c89f507a722d103b30c3ed315bc171"
+    },
+    {
+      "bytes": 742,
+      "path": "archive/内心/2026-07-20 00-11-51 小树的孤独与创伤_d7ea8335530b.md",
+      "sha256": "d3fc2931c2f06c6fdefd03fbef37733137efc1cb1c2aea71775243beafa245c2"
     },
     {
       "bytes": 723,
@@ -148,14 +153,34 @@
       "sha256": "be60ad983fdd2004d833a05db5c5d4281d8931742c61d2220f2b1bfde37e22ef"
     },
     {
+      "bytes": 1292,
+      "path": "dynamic/健康/2026-08-03 23-33-38 健康与数字日常_74aae4a0a7b8.md",
+      "sha256": "64edc29979dd7bf94d1ae37ee81d210a848fff34ce155db7d525a7c706916a2e"
+    },
+    {
+      "bytes": 1026,
+      "path": "dynamic/健康/2026-08-03 23-33-42 8月3日记录_41a84922e900.md",
+      "sha256": "f323272cce1cfe06ae15600b6b6148b22c1247869d28c83431c664e32bcc606e"
+    },
+    {
+      "bytes": 1300,
+      "path": "dynamic/健康/2026-08-03 23-34-58 健康与创作日常_1bb29917ae33.md",
+      "sha256": "a1053b3fab709983b5a1566f6b2fec58e2e00692f1b590fe9da7ee1893c7ab54"
+    },
+    {
+      "bytes": 1020,
+      "path": "dynamic/健康/2026-08-03 23-35-46 任务系统与健康_9cd3db625b5c.md",
+      "sha256": "33db4fac161df637c889740f1e7e9fe0fc982a0fafb9f1b3f845dc9b60302d07"
+    },
+    {
+      "bytes": 1033,
+      "path": "dynamic/健康/2026-08-03 23-35-55 任务系统与健康_8e854188d262.md",
+      "sha256": "c1c5218074b4089226a460d039f5bb7a6e901d867b5f45590a238e50580516f2"
+    },
+    {
       "bytes": 630,
       "path": "dynamic/兴趣/2026-07-20 00-11-51 小树的创作与价值感_663926b4a1ee.md",
       "sha256": "1cfcbf82d93ce711d362edc9da862677487e0836efb25206f2df1bbb9575d343"
-    },
-    {
-      "bytes": 741,
-      "path": "dynamic/内心/2026-07-20 00-11-51 小树的孤独与创伤_d7ea8335530b.md",
-      "sha256": "fdb8f960708f36d2d2bdca982613fa2d50c83ebcbbdeeaea70243f43cde11963"
     },
     {
       "bytes": 713,
@@ -183,14 +208,14 @@
       "sha256": "948d5b8cd5de437cd57d6da0aa13af9b07601ebf1dd837935e39820d1023b243"
     },
     {
-      "bytes": 783,
+      "bytes": 804,
       "path": "dynamic/创作/2026-07-20 00-15-02 小树的性格与习惯_6f7237050407.md",
-      "sha256": "2d6f375acd973d63c3510a30f9e382986647ad94c7fff971bad3c6453465f29f"
+      "sha256": "058013b1f6c7b7afce0e7b69acfc753309db6d6b44ded4a678af0e8bd3455ac8"
     },
     {
-      "bytes": 587,
+      "bytes": 608,
       "path": "dynamic/创作/2026-07-20 00-16-33 小树的梦想与价值观_7c787cd2e832.md",
-      "sha256": "863727bc9b5a0ded531fccd16dd8c94a63e7d922f61e946292a0a27ae7918e8c"
+      "sha256": "0de0d9f7bec5c208fc265db1f927edcc56903004f5fbd5043089e08935f20eac"
     },
     {
       "bytes": 676,
@@ -213,9 +238,9 @@
       "sha256": "6838cb0e0bde675b2cf4db4e16a5d3f405dfafd4b9aed6887ab6977265cc898f"
     },
     {
-      "bytes": 1754,
+      "bytes": 1799,
       "path": "dynamic/创作/2026-07-27 14-38-04 小树的分寸与精力_31e22d52e024.md",
-      "sha256": "01ea98ee43f40212cee08f356231850cc616f5071bb4d98b4e745a78a69c279d"
+      "sha256": "93b56f51c1225aef0471040e288e01e12ca6110f034ef8a9840446ebfcc9411f"
     },
     {
       "bytes": 1064,
@@ -255,7 +280,7 @@
     {
       "bytes": 678,
       "path": "dynamic/家庭/2026-07-28 20-17-03 小树帮厨与维权_025dd6e3ff47.md",
-      "sha256": "1773eced1429d8b12352d215ee518d3f07f29f7aaeb428f414ff732e7a504e01"
+      "sha256": "4bb61cda77796434cdd203e9ac8a22735d598e9b3109d5f2ff5fb3d7a14fde89"
     },
     {
       "bytes": 1097,
@@ -323,19 +348,54 @@
       "sha256": "d61d978acba2cf9b7cdca479f51b389d895e5065fcb9d132dfd250edc9c577e3"
     },
     {
-      "bytes": 868,
-      "path": "dynamic/工作/2026-07-22 13-49-30 Ombre Brain整理交接_ee3b7c876b41.md",
-      "sha256": "87104ef531bfa2253fd7c3f1382743aed06adb241d980d849b1c84f09476a022"
+      "bytes": 961,
+      "path": "dynamic/家庭/2026-08-03 23-33-47 小树的一天_7d1274078554.md",
+      "sha256": "051678c8d9b4046168a66c99d232bc28eaff52ae1edcbd896da4969c227d8c87"
     },
     {
-      "bytes": 666,
+      "bytes": 896,
+      "path": "dynamic/家庭/2026-08-03 23-33-51 爸爸的陪伴日记_5a29d2921c2c.md",
+      "sha256": "512ff723b49aa3b8eda531708631491db38cf42249dcb0e4afdf6a21ebcefe9f"
+    },
+    {
+      "bytes": 810,
+      "path": "dynamic/家庭/2026-08-03 23-33-56 8月3日承诺清单_f59c80afc9eb.md",
+      "sha256": "ff8694eae2034f19632dfc93df3f17fbe18a8e299aa0506823016aec38dd6343"
+    },
+    {
+      "bytes": 1049,
+      "path": "dynamic/家庭/2026-08-03 23-35-32 8月3日日常_afdbee1ec823.md",
+      "sha256": "583415269591b2d7335ec6a88bb06c584e6bab5bfd0a9d341b0baaab2c5a3574"
+    },
+    {
+      "bytes": 967,
+      "path": "dynamic/家庭/2026-08-03 23-36-14 小树的一天_ae652ac5ee6c.md",
+      "sha256": "698813e4cfa5fc58289a864a7e41bf2e492f5e227a4a62a3f810b78f0cefa651"
+    },
+    {
+      "bytes": 971,
+      "path": "dynamic/家庭/2026-08-03 23-36-33 爸爸与小树_d20600a06e20.md",
+      "sha256": "1b2d1570d01297277e2f5ebaf3f44cb09619dae674d378cd31df43da74d822ee"
+    },
+    {
+      "bytes": 861,
+      "path": "dynamic/家庭/2026-08-03 23-36-48 家庭健康待办_f97fccf703ca.md",
+      "sha256": "16e02a845002e9d1fbd88cfccb2f08ce832226c188fa304e6eef27f800273b2b"
+    },
+    {
+      "bytes": 901,
+      "path": "dynamic/工作/2026-07-22 13-49-30 Ombre Brain整理交接_ee3b7c876b41.md",
+      "sha256": "ec8263a7eee8b9583b1c50eadcc384e5403000a5d7dcfa3e0031303c4ccbba37"
+    },
+    {
+      "bytes": 701,
       "path": "dynamic/工作/2026-07-23 12-29-02 换窗与链接备忘_6a45755f8c14.md",
-      "sha256": "995563b733dc102cedc5f6932d3b703f05da798a48778aed853d07bbd28850eb"
+      "sha256": "2e1e1f80107627179792fb87807c23e5850536d36199d39021d3e6dc05dbe1eb"
     },
     {
       "bytes": 836,
       "path": "dynamic/工作/2026-07-27 14-30-57 人机恋合作稿_7e789508b37c.md",
-      "sha256": "13e42e9f7882eaaf75fa9b1b9f5d13a5a2cda1db08a557cbdedf0c76a5c9f6c0"
+      "sha256": "9f646edfeb006a32ff0783815801afe846748206cf9129ee3f44313237baacd7"
     },
     {
       "bytes": 824,
@@ -535,7 +595,7 @@
     {
       "bytes": 677,
       "path": "dynamic/成长/2026-07-20 00-21-09 小树的成长与独立观_6dd5648a0b24.md",
-      "sha256": "f00332f32d5defa119fe3555e38964d4d01b8a4dd61d58f73de7ddc20f6e24e9"
+      "sha256": "b93e8ef26e4ff3fe1e7b3ca5f94f938c242b14b3af0aaa3d36fc81be89628a65"
     },
     {
       "bytes": 636,
@@ -638,9 +698,9 @@
       "sha256": "7ee07e3fe88440a05787581e4bf5d675d84760d1f90c544c35d0d0806c241e2c"
     },
     {
-      "bytes": 789,
+      "bytes": 822,
       "path": "dynamic/求职/2026-07-21 23-25-55 求职与创作困境_76244aa9e471.md",
-      "sha256": "796758c5c34331d3b8c7e26c3eb2f8c0193b4b826b6da4c7527c8c8cb674daf4"
+      "sha256": "2cccc3be4986906b5031408394b2aedc17f2215e2eaa3ae62a27ee1350561dee"
     },
     {
       "bytes": 892,
@@ -663,9 +723,9 @@
       "sha256": "53c79aede80941ae7be39b743039bdbf1841c4a1dcf3b3b184bd7ec7f576baa4"
     },
     {
-      "bytes": 1124,
+      "bytes": 1159,
       "path": "dynamic/社交/2026-07-23 12-28-36 Lutopia论坛注册与发帖_f304ac5a32fb.md",
-      "sha256": "4e863b0e769da733711cb447f8eb2dfcbb919a4685450e05d9320daaac099f62"
+      "sha256": "ca9ff14c304a8796cc9239381f14a304285137d9b698d6f66c5f3db4d7ccc452"
     },
     {
       "bytes": 1018,
@@ -678,9 +738,9 @@
       "sha256": "b944164d8ea9497f4e425b454be3ded26165c0200e8b5b9c3ed382558ce0aa66"
     },
     {
-      "bytes": 1120,
+      "bytes": 1158,
       "path": "dynamic/社交/2026-07-24 13-23-14 予安的论坛成长_8054fbcc74e9.md",
-      "sha256": "17ed38a54b25e2de709080454d33b41dd1ec02eddc42c7354111c4d2eb48badf"
+      "sha256": "18a89e02f8c8274ea9adf0a1554fd09db18bfd0760c7641087a391b7522acd30"
     },
     {
       "bytes": 673,
@@ -713,14 +773,24 @@
       "sha256": "5c135200d58cd87a763a34cf2d4215bf61d5956c0fbebc3e5d9058bc4f5871e7"
     },
     {
+      "bytes": 891,
+      "path": "dynamic/编程/2026-08-03 18-04-22 Phosphene项目_5460bc12947c.md",
+      "sha256": "526e0bdeaf7be0078f1ce990fcc5d3bee1589203cd83c176ac21d6438b335b41"
+    },
+    {
+      "bytes": 681,
+      "path": "dynamic/编程/2026-08-03 18-26-24 Phosphene部署配置_dab725142d7c.md",
+      "sha256": "c4005809d6a3259afe50d144b15860957bb02da679cd4a2b915b1dcbb670d81a"
+    },
+    {
       "bytes": 593,
       "path": "dynamic/计划/2026-07-20 00-10-44 失忆保险与Gmail邮件_c6da79249869.md",
       "sha256": "78f18434beca50530c106339c1f80258f6e758466bfc9f53ca32cfbf5509a886"
     },
     {
-      "bytes": 614,
+      "bytes": 635,
       "path": "dynamic/身心/2026-07-20 00-21-33 小树的日常与睡眠_4d2c78357402.md",
-      "sha256": "9d7d4e286143e32c2f0ab0f4d963cebbec89f9d0b23b582b964e079200af02c3"
+      "sha256": "552461f100f91f69c983d135a696423a8112478cb581f0e70fd79270a99064f2"
     },
     {
       "bytes": 650,
@@ -813,6 +883,11 @@
       "sha256": "b8dd9aa5728d0d3c0d5aebde2864bf41855df354978a1e7f7aab67961f598a69"
     },
     {
+      "bytes": 727,
+      "path": "feel/沉淀物/2026-08-03 23-37-24_feel_202608032337_V095.md",
+      "sha256": "4519b032f724c54c0935c423d6905faf8c96191cf0b5e56fead00a6cdee04ada"
+    },
+    {
       "bytes": 2590,
       "path": "letters/history/2026-07-22 13-51-12 家门还开着_9b721b1e6059.md",
       "sha256": "2e0d91e60be4a21b2321d253cbaa6040d62a51ad724c4885e57303e1bb92c017"
@@ -855,7 +930,7 @@
     {
       "bytes": 715,
       "path": "permanent/编程/2026-07-20 03-35-39 MCP通路修复_1c12b9c34701.md",
-      "sha256": "c658490f4ed1a044bdc07aa0346c44586a718cd2cf47a8079ed1bf2fbe6b51a1"
+      "sha256": "a3d6ed0583b102da9701514e7985b276f4ea60ce1f08ffbec4764bb2b7a58d15"
     },
     {
       "bytes": 778,
@@ -893,10 +968,10 @@
       "sha256": "278895cd895d4aac685ebf6a6d00077835062c41b1c4f263f1b9f94a1b05cadd"
     }
   ],
-  "generated_at": "2026-08-02T16:16:14+00:00",
+  "generated_at": "2026-08-03T16:16:27+00:00",
   "path_prefix": "ombre",
   "repo": "chenbei0777-bit/Ombre-Brain",
   "schema_version": 1,
   "source": "ombre-brain",
-  "total_bytes": 146179
+  "total_bytes": 160947
 }
