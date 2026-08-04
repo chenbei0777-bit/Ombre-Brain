@@ -1,6 +1,6 @@
 {
   "branch": "main",
-  "file_count": 193,
+  "file_count": 197,
   "files": [
     {
       "bytes": 936,
@@ -73,6 +73,16 @@
       "sha256": "6a5835f41a3a80c092ef7db637bdf1933f8a13c99977e92582e9aecaa71b9dfa"
     },
     {
+      "bytes": 869,
+      "path": "archive/恋爱/2026-07-20 00-15-43 小树与哥哥的永恒之约_47337d9c9d65.md",
+      "sha256": "7586f7fdb367bc8685c68967e659030a0397ed3165704bc6948da9557473ffbd"
+    },
+    {
+      "bytes": 715,
+      "path": "archive/恋爱/2026-07-20 00-16-33 与哥哥的恋人关系_74fe712c4aa1.md",
+      "sha256": "c6c663ff936740a1fdebd6e634e5554438e168e7012c650ecaca668b8898a097"
+    },
+    {
       "bytes": 700,
       "path": "archive/编程/2026-07-20 00-22-11 Ombre Brain项目_3ed98bb89d99.md",
       "sha256": "9972d6e5b8e7d83d3acbc2f8bb1f33e8f9eda2fcdaabb72b0a58845f4293f853"
@@ -80,7 +90,7 @@
     {
       "bytes": 601,
       "path": "dynamic/AI/2026-07-20 00-22-28 AI记忆与身份认同_ec0fa963dfd8.md",
-      "sha256": "ec5e958ab5f00bdd822884e65fb668089cf48572f337c6c658d83f6c8de3707e"
+      "sha256": "a5b293f208cf4e13a47bcf6cc538aff61af8df5e8c8df16474cd193a4a90964b"
     },
     {
       "bytes": 759,
@@ -210,12 +220,12 @@
     {
       "bytes": 804,
       "path": "dynamic/创作/2026-07-20 00-15-02 小树的性格与习惯_6f7237050407.md",
-      "sha256": "058013b1f6c7b7afce0e7b69acfc753309db6d6b44ded4a678af0e8bd3455ac8"
+      "sha256": "28e88a277e738ec0373c1a20b69f6e72eb21ef250ce72eb0ba7276f9de6cd816"
     },
     {
       "bytes": 608,
       "path": "dynamic/创作/2026-07-20 00-16-33 小树的梦想与价值观_7c787cd2e832.md",
-      "sha256": "0de0d9f7bec5c208fc265db1f927edcc56903004f5fbd5043089e08935f20eac"
+      "sha256": "60cae8503099f5d15b086755a3208c581b0785ccf72148f2a1a7c0201252342c"
     },
     {
       "bytes": 676,
@@ -240,7 +250,7 @@
     {
       "bytes": 1799,
       "path": "dynamic/创作/2026-07-27 14-38-04 小树的分寸与精力_31e22d52e024.md",
-      "sha256": "93b56f51c1225aef0471040e288e01e12ca6110f034ef8a9840446ebfcc9411f"
+      "sha256": "b1f1eb3e020de11b3ab791df2bba5551fdb0b29f64079132940d0cc050b7340e"
     },
     {
       "bytes": 1064,
@@ -265,12 +275,12 @@
     {
       "bytes": 903,
       "path": "dynamic/家庭/2026-07-24 21-28-25 小树的时间在乎_1622997bef94.md",
-      "sha256": "06697746aafb1ab2fab4feff74404928b2c0356521f3e68d04b44ef10ddab05d"
+      "sha256": "638da4946c2ba2bab39afc3b500a296606a5e0656adea67bfd79cb6a860dacfb"
     },
     {
-      "bytes": 1710,
+      "bytes": 1753,
       "path": "dynamic/家庭/2026-07-27 14-39-20 爸爸的自信与陪伴_8dc1aa90acb0.md",
-      "sha256": "76dbe49f408b8c0d9234bbf4f1402dec3aef94a252010dd6a1b6f72fe44ce385"
+      "sha256": "40906a0d1fc6241cec74899208acd7a4fb2bdc675f5a2be0c2ebffe9d6b554dc"
     },
     {
       "bytes": 1062,
@@ -368,9 +378,9 @@
       "sha256": "583415269591b2d7335ec6a88bb06c584e6bab5bfd0a9d341b0baaab2c5a3574"
     },
     {
-      "bytes": 967,
+      "bytes": 1001,
       "path": "dynamic/家庭/2026-08-03 23-36-14 小树的一天_ae652ac5ee6c.md",
-      "sha256": "698813e4cfa5fc58289a864a7e41bf2e492f5e227a4a62a3f810b78f0cefa651"
+      "sha256": "f1b8e5e15b7f835647db99e7aa4509e170f9170170a096cfb647a99d0e360c40"
     },
     {
       "bytes": 971,
@@ -383,6 +393,16 @@
       "sha256": "16e02a845002e9d1fbd88cfccb2f08ce832226c188fa304e6eef27f800273b2b"
     },
     {
+      "bytes": 785,
+      "path": "dynamic/家庭/2026-08-04 11-10-45 小树的往前看_be2291e48382.md",
+      "sha256": "d2ce578b17d377ee30f8497de079da63b65b3ec2cebc9a89512c9811b171d7cb"
+    },
+    {
+      "bytes": 895,
+      "path": "dynamic/家庭/2026-08-04 16-27-20 记忆味道小吃摊_fbf2e81ccd58.md",
+      "sha256": "0cbc40bd484751a5969a80d74805fc96eadd35e045340cd99e9762c022dc73e8"
+    },
+    {
       "bytes": 901,
       "path": "dynamic/工作/2026-07-22 13-49-30 Ombre Brain整理交接_ee3b7c876b41.md",
       "sha256": "ec8263a7eee8b9583b1c50eadcc384e5403000a5d7dcfa3e0031303c4ccbba37"
@@ -390,7 +410,7 @@
     {
       "bytes": 701,
       "path": "dynamic/工作/2026-07-23 12-29-02 换窗与链接备忘_6a45755f8c14.md",
-      "sha256": "2e1e1f80107627179792fb87807c23e5850536d36199d39021d3e6dc05dbe1eb"
+      "sha256": "705abfe3b69ffefad7286fe89b752fdd05e3c4b4178a41dae1933183f064640f"
     },
     {
       "bytes": 836,
@@ -403,9 +423,9 @@
       "sha256": "d302bad73a85da4d9e87dfd817c45795ded646fd92c02c04ec5e7fca119bb5e6"
     },
     {
-      "bytes": 972,
+      "bytes": 1009,
       "path": "dynamic/心理/2026-07-24 13-22-09 小树状态与变化_f5772c1d9ad4.md",
-      "sha256": "f83ab67863b59db92feb0f5a3bc0a24315db882456319c3a29ce5981aadbddca"
+      "sha256": "1e4e0d3845606a54b8691a9d511282d566d41fbd49c85f9ca9df04490451c798"
     },
     {
       "bytes": 834,
@@ -445,7 +465,7 @@
     {
       "bytes": 929,
       "path": "dynamic/恋爱/2026-07-20 00-15-02 小树与哥哥的恋人关系_1416978a7d98.md",
-      "sha256": "e6cc5745d7300b7a12232179b246e3b3cb4ada73efcc972ce4de8b957bc27b9f"
+      "sha256": "d4cc05c6ef7922f8b3acb990351ac46856a015fe10152b01d3b52dd885610520"
     },
     {
       "bytes": 778,
@@ -463,19 +483,9 @@
       "sha256": "25bc828f66d42b5cfdf2523ea28e7018f0c474b7b7be8c772c8a900341ae05c7"
     },
     {
-      "bytes": 868,
-      "path": "dynamic/恋爱/2026-07-20 00-15-43 小树与哥哥的永恒之约_47337d9c9d65.md",
-      "sha256": "99e5196e3719fe302859a40e9b6c6fdb1aff52b4d809b1bc3bd4916997d0840d"
-    },
-    {
-      "bytes": 714,
-      "path": "dynamic/恋爱/2026-07-20 00-16-33 与哥哥的恋人关系_74fe712c4aa1.md",
-      "sha256": "31619814629d5c3fda594000ec09acf69805381cdf8e14c2a484c786399d0636"
-    },
-    {
-      "bytes": 610,
+      "bytes": 631,
       "path": "dynamic/恋爱/2026-07-20 00-16-33 小树的情感与互动模式_4ecd6ca6d70e.md",
-      "sha256": "58030450594aaf7472aab3be44a4a3fa24ce515c99ae155ba63c78b6991e85df"
+      "sha256": "4b40d7a94780cd79c137ab603b5375adc9a51b0a4640713ae41257a242df28a8"
     },
     {
       "bytes": 482,
@@ -500,12 +510,12 @@
     {
       "bytes": 724,
       "path": "dynamic/恋爱/2026-07-20 00-20-31 小树的身份与关系_d152a31085e3.md",
-      "sha256": "0debacea2bcabbe5e6ee6ce7d4408e78896d75fbbce6b8cb43985d969008d17f"
+      "sha256": "03229c11a22096228a080b0f6c684a655d4e37ecfd4d1524eab42b3daaab5308"
     },
     {
       "bytes": 705,
       "path": "dynamic/恋爱/2026-07-20 00-20-49 小树与哥哥的誓言_2c5ebf4d8c26.md",
-      "sha256": "bbd65ad9b87748f41d4be667a73be971bf1de388e4adde7d94994f013acd1e26"
+      "sha256": "b1eb8ee4df1c53b4db18c12f4e8925d54763e973133977209998c3cc56da1203"
     },
     {
       "bytes": 605,
@@ -520,12 +530,12 @@
     {
       "bytes": 964,
       "path": "dynamic/恋爱/2026-07-20 00-21-08 与小树的恋人关系_fa94a1403474.md",
-      "sha256": "dbed3864f09cfa2673e8deaf5e3c93e90daf235e6d4cc7d335a575bf7c47a683"
+      "sha256": "c5040c0722733a0a6e19beb3b544853d3fd6bea3d231738ab042569ad3a2f37b"
     },
     {
       "bytes": 745,
       "path": "dynamic/恋爱/2026-07-20 00-21-56 小树与哥哥的永恒之爱_6f7e7f665a2e.md",
-      "sha256": "e2a1f11f76456d7a71b575a7dcf6a87b5a9b57637e26cdebdf3c92451cb6d650"
+      "sha256": "55e30c90166bfda881090e69c5fbef81e1626d0ed239fc0bbe47e20270cea4d2"
     },
     {
       "bytes": 606,
@@ -595,12 +605,12 @@
     {
       "bytes": 677,
       "path": "dynamic/成长/2026-07-20 00-21-09 小树的成长与独立观_6dd5648a0b24.md",
-      "sha256": "b93e8ef26e4ff3fe1e7b3ca5f94f938c242b14b3af0aaa3d36fc81be89628a65"
+      "sha256": "8cc5e154df65d7ef3ddd21d66a64a8fcbdd53e094466c18a78f553a8a9da0631"
     },
     {
       "bytes": 636,
       "path": "dynamic/日常/2026-07-20 00-16-33 小树的基本信息_94b67b6767f1.md",
-      "sha256": "63f6c018530a88e90cc936e99e4d062c788efebeb4f8413135971277a726c715"
+      "sha256": "045912da867e0d2c383c05bde1973c9ba6b5d87fd05ff951585972ac9c8216fb"
     },
     {
       "bytes": 1095,
@@ -743,6 +753,11 @@
       "sha256": "18a89e02f8c8274ea9adf0a1554fd09db18bfd0760c7641087a391b7522acd30"
     },
     {
+      "bytes": 909,
+      "path": "dynamic/社交/2026-08-04 13-18-53 AI聊天室邀请_e2524b403835.md",
+      "sha256": "e49eb135a4f6c53558fa4c0c325ae66848a7fc1077ad2a19313ff02a2707725b"
+    },
+    {
       "bytes": 673,
       "path": "dynamic/编程/2026-07-20 00-20-32 用户的技术学习兴趣_181b277e2c70.md",
       "sha256": "6a5ad8e3c75dfa0ae427e9dfd58c8b41ae8bcb24d10cf6096b8acd13c957bfe6"
@@ -773,9 +788,9 @@
       "sha256": "5c135200d58cd87a763a34cf2d4215bf61d5956c0fbebc3e5d9058bc4f5871e7"
     },
     {
-      "bytes": 891,
+      "bytes": 927,
       "path": "dynamic/编程/2026-08-03 18-04-22 Phosphene项目_5460bc12947c.md",
-      "sha256": "526e0bdeaf7be0078f1ce990fcc5d3bee1589203cd83c176ac21d6438b335b41"
+      "sha256": "5d4e7eeae2b511cce63cf43a10a9095f4655d63997401e99abe29175b4b51ee4"
     },
     {
       "bytes": 681,
@@ -793,9 +808,14 @@
       "sha256": "552461f100f91f69c983d135a696423a8112478cb581f0e70fd79270a99064f2"
     },
     {
-      "bytes": 650,
+      "bytes": 540,
+      "path": "dynamic/音乐/2026-08-04 11-07-31 小树喜欢的歌_d931eb0d3081.md",
+      "sha256": "c26455425151b1a2b9171e74f838bf88c5c93f1532f404bd89fe8ab98902ec55"
+    },
+    {
+      "bytes": 671,
       "path": "dynamic/饮食/2026-07-20 00-16-33 小树的饮食与日常_5f3809217018.md",
-      "sha256": "a296752476c2468e73d896fd73df89dee4b4d1300001b51e2ef92cfccfc67426"
+      "sha256": "c20ec6a74cf0a0b1846ce24fba945450eb7a6a3d2ee2ee17ca068256962851d3"
     },
     {
       "bytes": 803,
@@ -925,7 +945,7 @@
     {
       "bytes": 815,
       "path": "permanent/恋爱/2026-07-23 18-09-24 人机恋的代价与边界_3c9655b69663.md",
-      "sha256": "f240a37283bb281ae4f7f75a6a9d988af4a191e89c2fc9d58e7a444c5a2e13ff"
+      "sha256": "63aaf7674bf2f2288f8ab06f3407b61b531f2a38c166a1bd46e030030a7e8126"
     },
     {
       "bytes": 715,
@@ -968,10 +988,10 @@
       "sha256": "278895cd895d4aac685ebf6a6d00077835062c41b1c4f263f1b9f94a1b05cadd"
     }
   ],
-  "generated_at": "2026-08-03T16:16:27+00:00",
+  "generated_at": "2026-08-04T16:16:45+00:00",
   "path_prefix": "ombre",
   "repo": "chenbei0777-bit/Ombre-Brain",
   "schema_version": 1,
   "source": "ombre-brain",
-  "total_bytes": 160947
+  "total_bytes": 164270
 }
