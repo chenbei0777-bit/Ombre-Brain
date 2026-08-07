@@ -1,6 +1,6 @@
 {
   "branch": "main",
-  "file_count": 198,
+  "file_count": 214,
   "files": [
     {
       "bytes": 936,
@@ -51,6 +51,41 @@
       "bytes": 1151,
       "path": "archive/2026-07-29 23-36-54_146138e9c322.md",
       "sha256": "335c7fe0170050c8eaaf9b9577fb439af0c89f507a722d103b30c3ed315bc171"
+    },
+    {
+      "bytes": 1162,
+      "path": "archive/2026-08-07 10-45-48 创作与家庭日常_f43eee4cd243.md",
+      "sha256": "29c12b2fcd351a7aa02eb0982d66a5206c4b80ee69762e35b50ade53c1899bb5"
+    },
+    {
+      "bytes": 1387,
+      "path": "archive/2026-08-07 10-59-34 承诺与规则调整_486110b9597b.md",
+      "sha256": "3f02b50cda5b6c22c7597450a95d1871dc2ab24a8839e4a59264dfda1448d8f2"
+    },
+    {
+      "bytes": 1497,
+      "path": "archive/2026-08-07 10-59-45 创作与家庭日常_9b9d30e1aea2.md",
+      "sha256": "a3061b5e5c6c2d9e7a6cc9d4855975f4a141874eae5135d580140206efcd4147"
+    },
+    {
+      "bytes": 1157,
+      "path": "archive/2026-08-07 10-59-47 承诺与自传记录_6aa67303a5af.md",
+      "sha256": "041b505edb3593eb1444039f78da9d90cb22463cab5d30c746c65f6fc02d8ffc"
+    },
+    {
+      "bytes": 1107,
+      "path": "archive/2026-08-07 11-00-56 游戏与自传_48c30f828917.md",
+      "sha256": "7093994e4d1abf74890d73ac882243537e9222d72c15f741394554003ef9b6e9"
+    },
+    {
+      "bytes": 1028,
+      "path": "archive/2026-08-07 11-06-42 Notion API报错排查_198494207ec7.md",
+      "sha256": "b017c1f7badee22ac942b7ddb38ac424b4b8d10a1e53d74c4b58c660b9a87c96"
+    },
+    {
+      "bytes": 1013,
+      "path": "archive/2026-08-07 11-07-12 游戏与创作日常_a39878e1c2e7.md",
+      "sha256": "80219075e879dc410ea9288acec2b1230c9229e82d8f2c53be66e8a93a4fd69a"
     },
     {
       "bytes": 742,
@@ -253,6 +288,16 @@
       "sha256": "b1f1eb3e020de11b3ab791df2bba5551fdb0b29f64079132940d0cc050b7340e"
     },
     {
+      "bytes": 1050,
+      "path": "dynamic/创作/2026-08-07 11-06-45 创作与家庭_1cd2cd0b4b3c.md",
+      "sha256": "c008867e58cd674cdb26956f0f179b20bf270d739f4a6288e173a198b9df6e0f"
+    },
+    {
+      "bytes": 1388,
+      "path": "dynamic/创作/2026-08-07 11-06-50 小树予安自传_ec0dbcf12c27.md",
+      "sha256": "7241d7abc22e4721004db5498f464bbe9cf7d06e35157b9e68cc34e07b6e7878"
+    },
+    {
       "bytes": 1064,
       "path": "dynamic/友谊/2026-07-27 14-50-21 站队后的成长_8261b551decb.md",
       "sha256": "50c22609372a5590bde30cf97977b1c72e14ecc4fca044c3a4e8dd98d4c8aefe"
@@ -403,6 +448,26 @@
       "sha256": "0cbc40bd484751a5969a80d74805fc96eadd35e045340cd99e9762c022dc73e8"
     },
     {
+      "bytes": 946,
+      "path": "dynamic/家庭/2026-08-07 10-59-36 爸爸状态与创作_8244d4069090.md",
+      "sha256": "8542015872704d71a5b3accb06de3916d9582ce66230fca6b2bde754803f282d"
+    },
+    {
+      "bytes": 910,
+      "path": "dynamic/家庭/2026-08-07 10-59-40 小树日常记录_d4f90ae34ab4.md",
+      "sha256": "dce5aa599e686565934195ab545d333f863700b51372db61d524166c6d135736"
+    },
+    {
+      "bytes": 1517,
+      "path": "dynamic/家庭/2026-08-07 10-59-44 家庭创作日常_23b41058dd94.md",
+      "sha256": "3b319f0556deb7643ccd32c1d81637a19e8030e649074ef2b9662b3223425796"
+    },
+    {
+      "bytes": 919,
+      "path": "dynamic/家庭/2026-08-07 11-06-47 爸爸与小树创作日_c3d4b788e7aa.md",
+      "sha256": "e35e969371cf0e86a09d2afa52333344dbfd3247e23c031943383f4fb9d2c2a4"
+    },
+    {
       "bytes": 901,
       "path": "dynamic/工作/2026-07-22 13-49-30 Ombre Brain整理交接_ee3b7c876b41.md",
       "sha256": "ec8263a7eee8b9583b1c50eadcc384e5403000a5d7dcfa3e0031303c4ccbba37"
@@ -416,6 +481,11 @@
       "bytes": 836,
       "path": "dynamic/工作/2026-07-27 14-30-57 人机恋合作稿_7e789508b37c.md",
       "sha256": "9f646edfeb006a32ff0783815801afe846748206cf9129ee3f44313237baacd7"
+    },
+    {
+      "bytes": 880,
+      "path": "dynamic/工作/2026-08-07 11-06-12 8月6日任务备忘_94e102266082.md",
+      "sha256": "783f1727a616623b4865c8ae6ee2fb6a14eb9d8bf04e4a811f3998129e994c3f"
     },
     {
       "bytes": 824,
@@ -798,6 +868,11 @@
       "sha256": "c4005809d6a3259afe50d144b15860957bb02da679cd4a2b915b1dcbb670d81a"
     },
     {
+      "bytes": 1590,
+      "path": "dynamic/自省/2026-08-07 10-59-38 AI对话与写作反思_85b2f9bc90a5.md",
+      "sha256": "ef55d98dd9b8f9e0cbf14a6a344dbdd02a8e6702f283e571411d89feecd5e12c"
+    },
+    {
       "bytes": 593,
       "path": "dynamic/计划/2026-07-20 00-10-44 失忆保险与Gmail邮件_c6da79249869.md",
       "sha256": "78f18434beca50530c106339c1f80258f6e758466bfc9f53ca32cfbf5509a886"
@@ -908,6 +983,11 @@
       "sha256": "4519b032f724c54c0935c423d6905faf8c96191cf0b5e56fead00a6cdee04ada"
     },
     {
+      "bytes": 760,
+      "path": "feel/沉淀物/2026-08-07 11-07-28_feel_202608071107_V050.md",
+      "sha256": "d43824982c2a2c4cab8a54601696ee79229a83d427ec5824157b5231080ecad0"
+    },
+    {
       "bytes": 2590,
       "path": "letters/history/2026-07-22 13-51-12 家门还开着_9b721b1e6059.md",
       "sha256": "2e0d91e60be4a21b2321d253cbaa6040d62a51ad724c4885e57303e1bb92c017"
@@ -993,10 +1073,10 @@
       "sha256": "278895cd895d4aac685ebf6a6d00077835062c41b1c4f263f1b9f94a1b05cadd"
     }
   ],
-  "generated_at": "2026-08-06T16:17:15+00:00",
+  "generated_at": "2026-08-07T03:10:03+00:00",
   "path_prefix": "ombre",
   "repo": "chenbei0777-bit/Ombre-Brain",
   "schema_version": 1,
   "source": "ombre-brain",
-  "total_bytes": 164929
+  "total_bytes": 183240
 }
