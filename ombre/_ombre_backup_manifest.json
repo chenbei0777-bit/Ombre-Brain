@@ -1043,11 +1043,6 @@
       "sha256": "ef9648dffcd040b0db2fccb5cdb9e238b2b210f3a57fcbd405f33bbe2ff90d84"
     },
     {
-      "bytes": 588,
-      "path": "plans/active/2026-07-24 18-33-55_e724f689d528.md",
-      "sha256": "a661a5a695d21910ae1bf9508ffcca9fffb043c1da51e479e86a167f20b404cc"
-    },
-    {
       "bytes": 586,
       "path": "plans/active/2026-07-24 18-33-57_01c2011879bb.md",
       "sha256": "59d90dd935769fcfe9eeac786f356c4d69ee113146425829b6db64d4bd93e12d"
@@ -1071,12 +1066,17 @@
       "bytes": 613,
       "path": "plans/active/2026-08-01 22-42-17_a8ef0a1e3ef2.md",
       "sha256": "278895cd895d4aac685ebf6a6d00077835062c41b1c4f263f1b9f94a1b05cadd"
+    },
+    {
+      "bytes": 669,
+      "path": "plans/resolved/2026-07-24 18-33-55_e724f689d528.md",
+      "sha256": "0a90ed6a94696ab091d567e9a1e16d64a2787a32fa9369d909a61dbac069ecc3"
     }
   ],
-  "generated_at": "2026-08-07T03:10:03+00:00",
+  "generated_at": "2026-08-07T16:17:33+00:00",
   "path_prefix": "ombre",
   "repo": "chenbei0777-bit/Ombre-Brain",
   "schema_version": 1,
   "source": "ombre-brain",
-  "total_bytes": 183240
+  "total_bytes": 183321
 }
