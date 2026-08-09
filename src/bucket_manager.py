@@ -333,6 +333,17 @@ from ombrebrain.projection.projection_sqlite import TraceSQLiteProjection
 from ombrebrain.projection.projection_vector import TraceVectorProjectionManifest
 from ombrebrain.policy.formal_invariants import FormalInvariantChecker
 
+
+def _letter_lock_revision(metadata: Any) -> tuple[str, str, str]:
+    if not hasattr(metadata, "get"):
+        return ("", "", "")
+    return (
+        str(metadata.get("lock_type") or "").strip().casefold(),
+        str(metadata.get("unlock_date") or "").strip(),
+        str(metadata.get("locked_by") or "").strip().casefold(),
+    )
+
+
 try:
     from bm25_index import BM25Index as _BM25Index
 except ImportError:
@@ -423,6 +434,11 @@ _METADATA_TEXT_LIMITS = {
     "user_name": 120,
     "title": 120,
     "letter_date": 64,
+    "lock_type": 16,
+    "unlock_date": 64,
+    "locked_by": 16,
+    "lock_owner_source": 32,
+    "writer_name": 120,
     "why_remembered": _WHY_REMEMBERED_MAX,
     "triggered_by": _TRIGGERED_BY_MAX,
     "source_tool": _SOURCE_TOOL_MAX,
@@ -1398,6 +1414,11 @@ class BucketManager:
         defer_derived_index: bool = False,
         imported: bool = False,
         source_refs: Any = None,
+        event_actor: str = "system",
+        lock_type: str = "",
+        unlock_date: str | None = None,
+        locked_by: str = "",
+        writer_name: str = "",
     ) -> str:
         """
         Create a new memory bucket, return bucket ID.
@@ -1418,8 +1439,12 @@ class BucketManager:
         - imported=True: 对话导入桶的持久化来源标记；创建时间与最后活跃时间
           均使用本次导入时刻。
         """
-        # ``allow_embedding_fallback`` is retained for API compatibility.
-        # All memory types now write first; embedding is a derived index.
+        # 保留 ``allow_embedding_fallback`` 以兼容旧调用；所有记忆类型均先写入，
+        # embedding 只是可重建的派生索引。
+        pinned = parse_bool(pinned, default=False)
+        protected = parse_bool(protected, default=False)
+        if pinned and protected:
+            raise ValueError("pinned 与 protected 不能同时为 True")
 
         # F-04: 清洗 content / tags / name 中的危险控制字符和双向覆写符
         content = self._sanitize_text(content)
@@ -1489,6 +1514,18 @@ class BucketManager:
         }
         if title:
             metadata["title"] = title
+        # Letter access metadata is written atomically with the original
+        # content.  A create-then-update window could briefly expose a locked
+        # body to a concurrent reader or vector search.
+        if bucket_type == "letter" and locked_by:
+            metadata["lock_type"] = str(lock_type or "none")[:16]
+            if unlock_date:
+                metadata["unlock_date"] = str(unlock_date)[:64]
+            metadata["locked_by"] = str(locked_by)[:16]
+            if writer_name:
+                metadata["writer_name"] = self._sanitize_text(
+                    str(writer_name)
+                ).strip()[:120]
         if source_refs:
             metadata["source_refs"] = source_refs
         if imported:
@@ -1507,10 +1544,11 @@ class BucketManager:
             metadata["type"] = "permanent"
 
         # --- iter 2.0: 来源工具与 grow 批次 ---
-        # source_tool 留空 = 调用方未声明（兼容老逻辑），不写 frontmatter。
+        # 今后所有记忆必须声明来源。旧调用方未传时统一标为 direct，避免
+        # footprint 只说“创建”却无法让模型判断这条记忆从哪里来。
         # grow_batch_id 仅 grow 路径会传，hold/feel 不会有这个字段。
-        if source_tool:
-            metadata["source_tool"] = str(source_tool).strip()[:_SOURCE_TOOL_MAX]
+        declared_source = str(source_tool or "direct").strip()[:_SOURCE_TOOL_MAX]
+        metadata["source_tool"] = declared_source or "direct"
         if grow_batch_id:
             metadata["grow_batch_id"] = str(grow_batch_id).strip()[:_GROW_BATCH_ID_MAX]
 
@@ -1703,6 +1741,7 @@ class BucketManager:
             str(metadata.get("type") or bucket_type),
             linked_content,
             metadata,
+            {"event_actor": str(event_actor or "system").strip().lower()},
         )
 
         return bucket_id
@@ -2005,6 +2044,8 @@ class BucketManager:
         old_str: str,
         new_str: str,
         append_plan_history: bool = False,
+        event_actor: str = "system",
+        expected_lock_state: Optional[tuple[str, str, str]] = None,
         **kwargs,
     ) -> dict[str, Any]:
         """Atomically replace one unique literal fragment in a bucket body.
@@ -2040,6 +2081,12 @@ class BucketManager:
                     exc,
                 )
                 return {"ok": False, "error": "read_failed", "matches": 0}
+
+            if (
+                expected_lock_state is not None
+                and _letter_lock_revision(post) != tuple(expected_lock_state)
+            ):
+                return {"ok": False, "error": "concurrent_lock", "matches": 0}
 
             current_content = str(post.content or "")
             # ``str.count`` ignores overlapping occurrences ("aa" in "aaa"),
@@ -2089,6 +2136,8 @@ class BucketManager:
                 committed = await self._update_locked(
                     bucket_id,
                     _derived_state_out=derived_state,
+                    event_actor=event_actor,
+                    expected_lock_state=expected_lock_state,
                     **updates,
                 )
             except ValueError as exc:
@@ -2123,6 +2172,8 @@ class BucketManager:
         *,
         allow_embedding_fallback: bool = False,
         bump_active: bool = False,
+        event_actor: str = "system",
+        expected_lock_state: Optional[tuple[str, str, str]] = None,
         **kwargs,
     ) -> bool:
         """
@@ -2142,6 +2193,8 @@ class BucketManager:
                 bucket_id,
                 allow_embedding_fallback=allow_embedding_fallback,
                 bump_active=bump_active,
+                event_actor=event_actor,
+                expected_lock_state=expected_lock_state,
                 _derived_state_out=derived_state,
                 **kwargs,
             )
@@ -2161,6 +2214,8 @@ class BucketManager:
         _derived_state_out: dict[str, Any],
         allow_embedding_fallback: bool = False,
         bump_active: bool = False,
+        event_actor: str = "system",
+        expected_lock_state: Optional[tuple[str, str, str]] = None,
         **kwargs,
     ) -> bool:
         file_path = self._find_bucket_file(bucket_id)
@@ -2173,6 +2228,7 @@ class BucketManager:
         for field in (
             "resolved",
             "pinned",
+            "protected",
             "digested",
             "dont_surface",
             "first_of_kind",
@@ -2229,12 +2285,20 @@ class BucketManager:
             logger.warning(f"Failed to load bucket for update / 加载桶失败: {file_path}: {e}")
             return False
 
+        if (
+            expected_lock_state is not None
+            and _letter_lock_revision(post) != tuple(expected_lock_state)
+        ):
+            logger.info("update() rejected concurrent Letter lock change: %s", bucket_id)
+            return False
+
         # Work out the final pin/type state before mutating the post.  Type is
         # also a physical-storage decision, so unsupported values must fail
         # here instead of being written into frontmatter and reported as a
         # successful edit.
         was_pinned = parse_bool(post.get("pinned", False), default=False)
         is_protected = parse_bool(post.get("protected", False), default=False)
+        was_anchor = parse_bool(post.get("anchor", False), default=False)
         current_type = str(post.get("type") or "dynamic").strip().lower()
         if (
             current_type == "archived"
@@ -2253,9 +2317,30 @@ class BucketManager:
         will_be_pinned = parse_bool(
             kwargs.get("pinned", was_pinned), default=was_pinned
         )
+        will_be_protected = parse_bool(
+            kwargs.get("protected", is_protected), default=is_protected
+        )
+        will_be_anchor = parse_bool(
+            kwargs.get("anchor", was_anchor), default=was_anchor
+        )
+        if will_be_pinned and will_be_protected:
+            logger.warning(
+                "update() rejected incompatible pinned/protected state "
+                "bucket=%s",
+                bucket_id,
+            )
+            return False
+        if will_be_anchor and will_be_protected:
+            logger.warning(
+                "update() rejected incompatible anchor/protected state "
+                "bucket=%s",
+                bucket_id,
+            )
+            return False
 
         requested_type: str | None = None
-        if "type" in kwargs:
+        explicit_type_requested = "type" in kwargs
+        if explicit_type_requested:
             requested_type = str(kwargs["type"] or "").strip().lower()
             if requested_type not in _EDITABLE_BUCKET_TYPES:
                 logger.warning(
@@ -2267,9 +2352,11 @@ class BucketManager:
         forced_type: str | None = None
         if will_be_pinned:
             forced_type = "permanent"
-        elif "pinned" in kwargs and was_pinned and not is_protected:
-            # A true pinned bucket demotes when explicitly unpinned.  Explicit
-            # permanent memories (was_pinned=False) remain permanent.
+        elif "pinned" in kwargs and was_pinned:
+            # 真正的 pinned 桶在显式解除时降回 dynamic；原本就是
+            # permanent（was_pinned=False）的记忆仍保持 permanent。
+            # pinned -> protected 的同步切换仍在同一个事务内完成，
+            # 但 protected 本身不强制任何存储类型。
             forced_type = "dynamic"
 
         if forced_type is not None:
@@ -2286,9 +2373,10 @@ class BucketManager:
             requested_type = forced_type
 
         if (
-            requested_type is not None
+            explicit_type_requested
+            and requested_type is not None
             and requested_type != current_type
-            and is_protected
+            and will_be_protected
             and requested_type != "permanent"
         ):
             logger.warning(
@@ -2299,10 +2387,9 @@ class BucketManager:
             )
             return False
 
-        # pinned/protected buckets lock importance at 10.  An atomic
-        # pinned=False + importance=N transition is allowed, because the final
-        # state is no longer pinned; this is needed for quota-safe unpinning.
-        if will_be_pinned or is_protected:
+        # 最终仍为 pinned/protected 时把 importance 锁定为 10；若在同一事务中
+        # 解除最后一层保护，则允许恢复调用方显式选择的动态 importance。
+        if will_be_pinned or will_be_protected:
             kwargs.pop("importance", None)
 
         # --- Update only fields that were passed in / 只改传入的字段 ---
@@ -2336,6 +2423,13 @@ class BucketManager:
             if kwargs["pinned"]:
                 post["importance"] = _PINNED_IMPORTANCE  # pinned → lock importance to 10
                 post.metadata.pop("anchor", None)  # pinned 与 anchor 互斥：钉为核心准则即清除坐标系标记
+        if "protected" in kwargs:
+            if kwargs["protected"]:
+                post["protected"] = True
+                post["importance"] = _PINNED_IMPORTANCE
+            else:
+                # False 回到缺省态，不在新数据里留遗留假值字段。
+                post.metadata.pop("protected", None)
         if "digested" in kwargs:
             post["digested"] = kwargs["digested"]
         if "model_valence" in kwargs:
@@ -2373,6 +2467,7 @@ class BucketManager:
         # 由 server.py 的 plan() / trace() / /api/plans/{id}/action 维护，bucket_manager 不参与生成。
         for k in ("status", "type", "resolution_reason", "resolved_by",
                   "related_bucket", "author", "user_name", "letter_date",
+                  "lock_type", "unlock_date", "locked_by", "lock_owner_source", "writer_name",
                   "change_log",
                   # iter 1.8 新增字段。除 weight 外全部透传不转换。
                   # weight 在 plan 上才有意义；这里不在这个循环里校验类型，由上层 server.py 保证传入范围。
@@ -2389,7 +2484,13 @@ class BucketManager:
                   # 表示「最后一次合并是 hold 还是 grow 触发的」。
                   # _pre_anchor_source_tool 是 anchor 时保存的原始 source_tool，
                   # release 时自动恢复；None 表示删除该字段。
-                  "source_tool", "grow_batch_id", "last_merged_by", "_pre_anchor_source_tool"):
+                  "source_tool", "grow_batch_id", "last_merged_by", "_pre_anchor_source_tool",
+                  # I 沉淀机制字段（tools/i/core.py 维护，bucket_manager 不生成也不解读）：
+                  # i_stage        "candidate" | "promoted"，标一条普通记忆是 I 候选
+                  # i_dream_dates  被 dream 见证过的日期列表（按天去重），升级门槛的唯一依据
+                  # i_promoted_to  候选升级后指向的正式 I 桶 ID
+                  # i_from_candidate 正式 I 桶指回它的候选桶 ID
+                  "i_stage", "i_dream_dates", "i_promoted_to", "i_from_candidate"):
             if k in kwargs:
                 if k == "weight" and kwargs[k] is not None:
                     post[k] = _clamp01(kwargs[k], _DEFAULT_VALENCE)
@@ -2505,7 +2606,10 @@ class BucketManager:
             str(post.get("type") or "dynamic"),
             post.content or "",
             dict(post.metadata),
-            {"changed_fields": sorted(str(k) for k in kwargs.keys())},
+            {
+                "changed_fields": sorted(str(k) for k in kwargs.keys()),
+                "event_actor": str(event_actor or "system").strip().lower(),
+            },
         )
 
         return True
@@ -2584,7 +2688,13 @@ class BucketManager:
             await self._discard_derived_index_if_terminal(bucket_id)
         return deleted
 
-    async def restore_archived(self, bucket_id: str) -> dict:
+    async def restore_archived(
+        self,
+        bucket_id: str,
+        *,
+        importance_override: Optional[int] = None,
+        protected_override: Optional[bool] = None,
+    ) -> dict:
         """Restore an archived/tombstoned Markdown bucket to its original channel.
 
         Discovery never calls this method.  It is deliberately exposed only
@@ -2622,12 +2732,56 @@ class BucketManager:
             )
             if original_kind not in _EDITABLE_BUCKET_TYPES:
                 original_kind = "dynamic"
-            if parse_bool(post.get("pinned"), default=False) or parse_bool(
-                post.get("protected"), default=False
+            was_pinned = parse_bool(post.get("pinned"), default=False)
+            is_protected = parse_bool(post.get("protected"), default=False)
+            is_anchor = parse_bool(post.get("anchor"), default=False)
+            if protected_override is not None and parse_bool(
+                protected_override, default=False
             ):
+                return {"ok": False, "error": "invalid_protected_override"}
+            final_protected = (
+                is_protected
+                if protected_override is None
+                else False
+            )
+            if final_protected and is_anchor:
+                return {
+                    "ok": False,
+                    "error": "incompatible_protected_anchor",
+                }
+            if (
+                is_protected
+                and not final_protected
+                and importance_override is None
+            ):
+                return {
+                    "ok": False,
+                    "error": "missing_importance_override",
+                }
+            if was_pinned:
                 original_kind = "permanent"
 
             post["type"] = original_kind
+            # 归档态不占 pinned 名额；恢复时也不能暗中重新占用。
+            # 历史 pinned+protected 脏数据通常原子收敛为仅 protected；
+            # 显式 protected_override=False 的恢复则同时解除 protected。
+            post["pinned"] = False
+            if final_protected:
+                post["protected"] = True
+                post["importance"] = _PINNED_IMPORTANCE
+            else:
+                post.metadata.pop("protected", None)
+            if not final_protected and importance_override is not None:
+                try:
+                    normalized_importance = int(importance_override)
+                except (TypeError, ValueError, OverflowError):
+                    return {"ok": False, "error": "invalid_importance_override"}
+                if not 1 <= normalized_importance <= 10:
+                    return {"ok": False, "error": "invalid_importance_override"}
+                post["importance"] = normalized_importance
+            # 显式恢复应刷新衰减使用的活跃时钟；保留旧时间会让低分桶
+            # 在下一轮衰减中立即二次归档。与类型恢复一起原子提交，避免分裂。
+            post["last_active"] = now_iso()
             for field in (
                 "deleted_at", "tombstone", "tombstoned_at", "erasure_mode"
             ):
@@ -2902,6 +3056,7 @@ class BucketManager:
         query_arousal: Optional[float] = None,
         vector_scores: Optional[dict[str, float]] = None,
         include_archive: bool = False,
+        allowed_bucket_ids: Optional[set[str]] = None,
     ) -> list[dict]:
         """
         Multi-dimensional indexed search for memory buckets.
@@ -2920,6 +3075,17 @@ class BucketManager:
 
         if not all_buckets:
             return []
+        searchable_buckets = all_buckets
+        if allowed_bucket_ids is not None:
+            allowed_ids = {str(bucket_id) for bucket_id in allowed_bucket_ids}
+            searchable_buckets = [
+                bucket for bucket in all_buckets
+                if str(bucket.get("id")) in allowed_ids
+            ]
+        else:
+            allowed_ids = None
+        if not searchable_buckets:
+            return []
 
         # --- Layer 0: bucket-id 直达通道（纯定位，短路）---
         # bucket id 是随机 hex、**没有语义**，不该进向量/BM25/模糊通道（塞进去只会
@@ -2929,7 +3095,7 @@ class BucketManager:
         # 中，故按 id 也搜不到已删除桶，与 get() 的可见性一致。
         q_exact = query.strip()
         if q_exact:
-            for b in all_buckets:
+            for b in searchable_buckets:
                 if str(b.get("id")) == q_exact:
                     hit = dict(b)
                     hit["score"] = 1.0
@@ -2940,15 +3106,15 @@ class BucketManager:
         if domain_filter:
             filter_set = {d.lower() for d in domain_filter}
             candidates = [
-                b for b in all_buckets
+                b for b in searchable_buckets
                 if {d.lower() for d in b["metadata"].get("domain", [])} & filter_set
             ]
             # Fall back to full search if pre-filter yields nothing
             # 预筛为空则回退全量搜索
             if not candidates:
-                candidates = all_buckets
+                candidates = searchable_buckets
         else:
-            candidates = all_buckets
+            candidates = searchable_buckets
 
         # --- Layer 1.5: embedding 语义分数（仅作为打分维度，不再窄化候选集）---
         # 历史上这里把候选集替换成「在 embeddings.db 里的桶」，导致：
@@ -2964,13 +3130,27 @@ class BucketManager:
             vector_scores = {}
         else:
             vector_scores = dict(vector_scores)
+        if allowed_ids is not None:
+            vector_scores = {
+                bucket_id: score for bucket_id, score in vector_scores.items()
+                if str(bucket_id) in allowed_ids
+            }
         if (
             not vector_scores_provided
             and self.embedding_engine
             and self.embedding_engine.enabled
         ):
             try:
-                vector_results = await self.embedding_engine.search_similar(query, top_k=_VECTOR_TOPK)
+                if allowed_ids is None:
+                    vector_results = await self.embedding_engine.search_similar(
+                        query, top_k=_VECTOR_TOPK
+                    )
+                else:
+                    vector_results = await self.embedding_engine.search_similar(
+                        query,
+                        top_k=_VECTOR_TOPK,
+                        allowed_bucket_ids=allowed_ids,
+                    )
                 if vector_results:
                     vector_scores = {bid: score for bid, score in vector_results}
             except Exception as e:
