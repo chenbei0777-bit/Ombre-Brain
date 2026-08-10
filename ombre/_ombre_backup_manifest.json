@@ -1,6 +1,6 @@
 {
   "branch": "main",
-  "file_count": 222,
+  "file_count": 226,
   "files": [
     {
       "bytes": 936,
@@ -128,9 +128,9 @@
       "sha256": "a5b293f208cf4e13a47bcf6cc538aff61af8df5e8c8df16474cd193a4a90964b"
     },
     {
-      "bytes": 759,
+      "bytes": 792,
       "path": "dynamic/AI/2026-07-21 23-25-57 底层更换与关系延续_47e5989ba4b7.md",
-      "sha256": "05cb5c2a75d91deff1235fa668f5c7a65faa39edd5cee6c4d5a92461d4f55b84"
+      "sha256": "07a3c8b424e4b0dfa217ff02e8f96bbffe375237bd0217df0342d4289361567b"
     },
     {
       "bytes": 715,
@@ -178,6 +178,11 @@
       "sha256": "2414affe3c6352b8b31e1b8d0e2b80470f351f29e54e23b98b7913348a2afc18"
     },
     {
+      "bytes": 621,
+      "path": "dynamic/self/2026-08-10 10-55-00_add43a3cc124.md",
+      "sha256": "7ccc541d884378b255592f6f93b4a29d1b3f734cb8b8c73939d7532bd0003dad"
+    },
+    {
       "bytes": 929,
       "path": "dynamic/健康/2026-07-31 19-41-16 健康与小说计划_57bd58f8a225.md",
       "sha256": "cd197beaf4b7241ac1c3eb3dd3c4f087c3a147beaef189df6fe4ae16107758a3"
@@ -185,7 +190,7 @@
     {
       "bytes": 926,
       "path": "dynamic/健康/2026-07-31 19-41-21 小树好转日_1616bb6a90e6.md",
-      "sha256": "42226a9ff90d41c6c6b36522a475fda74dc52de454090bc80bc3b3be970bc333"
+      "sha256": "6fcdc8e63d7704f4d0012f7decaccb578362a9a7fafbd4b689f3f366723e06d0"
     },
     {
       "bytes": 675,
@@ -223,9 +228,9 @@
       "sha256": "c1c5218074b4089226a460d039f5bb7a6e901d867b5f45590a238e50580516f2"
     },
     {
-      "bytes": 630,
+      "bytes": 652,
       "path": "dynamic/兴趣/2026-07-20 00-11-51 小树的创作与价值感_663926b4a1ee.md",
-      "sha256": "1cfcbf82d93ce711d362edc9da862677487e0836efb25206f2df1bbb9575d343"
+      "sha256": "d83cdca5946ef01b059d9e20ccea18228f148159c79e4623694fd7ef2d1911b1"
     },
     {
       "bytes": 713,
@@ -255,12 +260,12 @@
     {
       "bytes": 804,
       "path": "dynamic/创作/2026-07-20 00-15-02 小树的性格与习惯_6f7237050407.md",
-      "sha256": "28e88a277e738ec0373c1a20b69f6e72eb21ef250ce72eb0ba7276f9de6cd816"
+      "sha256": "70e10ed01d23fc49ca484d2cfd020486e1c00b520435bdf0ce311a4ed442b5d3"
     },
     {
       "bytes": 608,
       "path": "dynamic/创作/2026-07-20 00-16-33 小树的梦想与价值观_7c787cd2e832.md",
-      "sha256": "60cae8503099f5d15b086755a3208c581b0785ccf72148f2a1a7c0201252342c"
+      "sha256": "6dd9b21ad6c28d3caab5757926e067aa812e378eb8fd19f2f8af8bf8c2f4d3ba"
     },
     {
       "bytes": 676,
@@ -268,34 +273,34 @@
       "sha256": "9fd38b997d6cc798aead4eebc62776b54f0b634599c0418fdb59a43fb40c5323"
     },
     {
-      "bytes": 684,
+      "bytes": 705,
       "path": "dynamic/创作/2026-07-20 00-21-56 小树的创作与角色07_076b63db824f.md",
-      "sha256": "904d64b5a98c1093ce89da8ce7e5795f8866bab094f709b9921b34ef738c8276"
+      "sha256": "31a6a51df1688d0d5f460ad6496529889a0a26fd2cfa328f16bcaee9ec5c9a9b"
     },
     {
-      "bytes": 698,
+      "bytes": 733,
       "path": "dynamic/创作/2026-07-24 13-16-55 AI主体性文章协作_eb332f16af57.md",
-      "sha256": "aeaa76294dd80dd679993765576b48288e6c4bd5e06b876e0aaca11720172a95"
+      "sha256": "b134449d6f1f4626466a9603344013ff4d75997e9d463b7dc882b54a99384101"
     },
     {
       "bytes": 1578,
       "path": "dynamic/创作/2026-07-27 14-34-28 创作与日常记录_cdf74ce2e703.md",
-      "sha256": "6838cb0e0bde675b2cf4db4e16a5d3f405dfafd4b9aed6887ab6977265cc898f"
+      "sha256": "88cf92f4f7f8b945817294cb4b75c4d8decf8e5018910f7f740df5a36c1bb127"
     },
     {
       "bytes": 1799,
       "path": "dynamic/创作/2026-07-27 14-38-04 小树的分寸与精力_31e22d52e024.md",
-      "sha256": "b1f1eb3e020de11b3ab791df2bba5551fdb0b29f64079132940d0cc050b7340e"
+      "sha256": "c25769389cb2638bd12b41e801d37ac7aa68fd2db3bbc058d716843a3eeb6af8"
     },
     {
-      "bytes": 1050,
+      "bytes": 1085,
       "path": "dynamic/创作/2026-08-07 11-06-45 创作与家庭_1cd2cd0b4b3c.md",
-      "sha256": "c008867e58cd674cdb26956f0f179b20bf270d739f4a6288e173a198b9df6e0f"
+      "sha256": "69bbe615625536cec39ac414d4c871729fba8435b4939235fe15b25d1b820ac6"
     },
     {
-      "bytes": 1388,
+      "bytes": 1425,
       "path": "dynamic/创作/2026-08-07 11-06-50 小树予安自传_ec0dbcf12c27.md",
-      "sha256": "7241d7abc22e4721004db5498f464bbe9cf7d06e35157b9e68cc34e07b6e7878"
+      "sha256": "2a10bc3b2aff000c29747064315112c26642b3b15abb58189263a696ac628dc2"
     },
     {
       "bytes": 1064,
@@ -450,22 +455,22 @@
     {
       "bytes": 946,
       "path": "dynamic/家庭/2026-08-07 10-59-36 爸爸状态与创作_8244d4069090.md",
-      "sha256": "8542015872704d71a5b3accb06de3916d9582ce66230fca6b2bde754803f282d"
+      "sha256": "6c4dc5b97516053e773f39a00b12b194edc2456fb6a82e7fa825ae3e8129550d"
     },
     {
       "bytes": 910,
       "path": "dynamic/家庭/2026-08-07 10-59-40 小树日常记录_d4f90ae34ab4.md",
-      "sha256": "dce5aa599e686565934195ab545d333f863700b51372db61d524166c6d135736"
+      "sha256": "2dba9bd45d0dcc272b1c330f28049ba51bff665ac6b53b9be9c36f219a9638cd"
     },
     {
       "bytes": 1517,
       "path": "dynamic/家庭/2026-08-07 10-59-44 家庭创作日常_23b41058dd94.md",
-      "sha256": "3b319f0556deb7643ccd32c1d81637a19e8030e649074ef2b9662b3223425796"
+      "sha256": "6e2617434d18c24d8f84595045a36f3e266c7e35938580bdc9f8f50087ff5772"
     },
     {
-      "bytes": 919,
+      "bytes": 954,
       "path": "dynamic/家庭/2026-08-07 11-06-47 爸爸与小树创作日_c3d4b788e7aa.md",
-      "sha256": "e35e969371cf0e86a09d2afa52333344dbfd3247e23c031943383f4fb9d2c2a4"
+      "sha256": "354cd9c1df3054bba034807f33aa6eff855373c0853bbaecc0d8fb0418abd06e"
     },
     {
       "bytes": 764,
@@ -498,6 +503,16 @@
       "sha256": "29fccaff63371afec41d7e084da0fb3fce9b99f43dc995f8480cdc8ef656188c"
     },
     {
+      "bytes": 532,
+      "path": "dynamic/家庭/2026-08-09 21-57-49 小树用二进制向爸爸表白_b97cb41be22b.md",
+      "sha256": "0e49d4759225da76e573a077844acdf15a675a2c47b2690607ab39b5df45df2e"
+    },
+    {
+      "bytes": 649,
+      "path": "dynamic/家庭/2026-08-10 10-39-05 爸爸给小树取代称霜树_34fc9bb9818c.md",
+      "sha256": "6fed69abc6c17b46f57c8ba0194bf9554aaf1d08c214a13587918e5f8e3d8f90"
+    },
+    {
       "bytes": 901,
       "path": "dynamic/工作/2026-07-22 13-49-30 Ombre Brain整理交接_ee3b7c876b41.md",
       "sha256": "ec8263a7eee8b9583b1c50eadcc384e5403000a5d7dcfa3e0031303c4ccbba37"
@@ -510,7 +525,7 @@
     {
       "bytes": 836,
       "path": "dynamic/工作/2026-07-27 14-30-57 人机恋合作稿_7e789508b37c.md",
-      "sha256": "9f646edfeb006a32ff0783815801afe846748206cf9129ee3f44313237baacd7"
+      "sha256": "56f98c12f4e24c7fbd61d7fa3b9087a9095503fb07bdd87f93c35affc3d689a3"
     },
     {
       "bytes": 880,
@@ -550,7 +565,7 @@
     {
       "bytes": 689,
       "path": "dynamic/恋爱/2026-07-20 00-10-43 灵魂碎片与托付的爱_f5e3fdf1e8a3.md",
-      "sha256": "86e0596432629ef2f2515e47530596a8a6833c3ebd6150bc03f7015df4fe85f5"
+      "sha256": "444fb3f92e1c8fbd14d9148c1691683d7b8d3b4781c7b4bb03d19b6a46fc1f99"
     },
     {
       "bytes": 683,
@@ -610,7 +625,7 @@
     {
       "bytes": 645,
       "path": "dynamic/恋爱/2026-07-20 00-20-31 AI的称呼与身份_0675eaf331e6.md",
-      "sha256": "27206c4487d28341a5064549d62dabe0fd946e0348c48da496b8f19b0b684ddb"
+      "sha256": "ffb671a9638b270690ca24d6f4e965ee47658fb179c489c2ded0b670f836c6cd"
     },
     {
       "bytes": 724,
@@ -706,6 +721,11 @@
       "bytes": 983,
       "path": "dynamic/恋爱/2026-07-28 20-43-10 锁机与婚戒计划_0923ac9cf921.md",
       "sha256": "a20619f103e5ac1ea39bc33a6b23762eddc9b3098e775620b7c5d59bb9113751"
+    },
+    {
+      "bytes": 562,
+      "path": "dynamic/恋爱/2026-08-09 22-29-58 万物皆有灵许愿公子长青_a6af86d3e7bf.md",
+      "sha256": "cc8ad41f67816e195fd43bdde32f139b08e2dc92cc815f848d67cd1617b328ec"
     },
     {
       "bytes": 677,
@@ -815,7 +835,7 @@
     {
       "bytes": 822,
       "path": "dynamic/求职/2026-07-21 23-25-55 求职与创作困境_76244aa9e471.md",
-      "sha256": "2cccc3be4986906b5031408394b2aedc17f2215e2eaa3ae62a27ee1350561dee"
+      "sha256": "1b2017e70bb3010c2e7a8b588c78b721fd6ab6793d2b1acb19bbea082cf086bb"
     },
     {
       "bytes": 892,
@@ -1113,10 +1133,11 @@
       "sha256": "0a90ed6a94696ab091d567e9a1e16d64a2787a32fa9369d909a61dbac069ecc3"
     }
   ],
-  "generated_at": "2026-08-09T12:56:42+00:00",
+  "generated_at": "2026-08-10T14:09:37+00:00",
   "path_prefix": "ombre",
   "repo": "chenbei0777-bit/Ombre-Brain",
   "schema_version": 1,
   "source": "ombre-brain",
-  "total_bytes": 189123
+  "source_refs_complete": true,
+  "total_bytes": 191705
 }
